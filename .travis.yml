@@ -7,3 +7,12 @@ before_install:
 
 notifications:
  email: false
+
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: AKIAI4IMKBWJKICHJYNA
+  secret_access_key:
+    secure: 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
+  region: "eu-central-1"
+  app: "spring-boot-docker-test"
+  env: "e-3gicyu9niw"
