@@ -11,9 +11,7 @@ public class Application {
 
     @RequestMapping("/")
     public String home() {
-        return "Madzia nie chce ze mną graaaaaaaaaaaaaaaaaaaaaać w <b>Memoria</b> :'(((((((((((((((((<br/>"
-                + "<br/>"
-                + "Ale za to Madzia zabija <i>Żołnierzem 76</i> w <b>Overwatch</b> ^.^";
+        return "Spring boot app in Docker with Travis CI";
     }
 
     public static void main(String[] args) {
