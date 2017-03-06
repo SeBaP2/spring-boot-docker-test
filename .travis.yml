@@ -12,9 +12,12 @@ deploy:
   on:
     branch: master
   provider: elasticbeanstalk
-  access_key_id: $TRAVIS_AWS_ACCESS_KEY
+  access_key_id: $AWS_ACCESS_KEY
   secret_access_key:
-    secure: $TRAVIS_AWS_SECRET_KEY
-  region: $TRAVIS_AWS_REGION
-  app: $TRAVIS_AWS_APP
-  env: $TRAVIS_AWS_ENV
+    secure: $AWS_SECRET_KEY
+  bucket_name: $AWS_BUCKET_NAME
+  region: $AWS_REGION
+  app: $AWS_APP
+  env: $AWS_ENV
+
+# working example: https://travis-ci.org/ExampleDriven/spring-boot-aws-elasticbeanstalk-example
