@@ -9,10 +9,12 @@ notifications:
  email: false
 
 deploy:
+  on:
+    branch: master
   provider: elasticbeanstalk
-  access_key_id: AKIAI4IMKBWJKICHJYNA
+  access_key_id: $TRAVIS_AWS_ACCESS_KEY
   secret_access_key:
-    secure: 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
-  region: "eu-central-1"
-  app: "spring-boot-docker-test"
-  env: "e-3gicyu9niw"
+    secure: $TRAVIS_AWS_SECRET_KEY
+  region: $TRAVIS_AWS_REGION
+  app: $TRAVIS_AWS_APP
+  env: $TRAVIS_AWS_ENV
